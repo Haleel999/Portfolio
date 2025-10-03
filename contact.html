@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message | Haleel</title>
+    <meta name="description" content="Send a detailed message to Haleel about your project requirements.">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><img src="assets/my-logo-1.png" alt="Haleel Logo"></a>
+            
+            <nav> 
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Case Studies</a></li>
+                    <li><a href="booking.html" class="nav-link">Book Session</a></li>
+                    <li><a href="contact.html" class="nav-link active">Send Message</a></li>
+                </ul>
+            </nav>
+            
+            <div class="top-btns">
+                <a href="booking.html" class="btn talk-btn"><i class="fas fa-calendar-check"></i> Book Session</a>
+                <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Contact Message Section -->
+        <section class="contact-message-section section">
+            <div class="container">
+                <div class="contact-message-container">
+                    <div class="contact-message-info">
+                        <h1>Send Me a Message</h1>
+                        <p class="contact-message-subtitle">Share your project details and I'll get back to you with a comprehensive proposal</p>
+                        
+                        <div class="contact-message-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-reply"></i>
+                                <div>
+                                    <h4>24-Hour Response</h4>
+                                    <p>I'll respond to your message within 24 hours</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <h4>Detailed Proposal</h4>
+                                    <p>Receive a customized proposal with timeline and pricing</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-lock"></i>
+                                <div>
+                                    <h4>Confidential</h4>
+                                    <p>Your project details are kept completely confidential</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-quick-info">
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>jamiuhaleel@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>07072073530</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-message-form-container">
+                        <form id="contactMessageForm" class="contact-message-form" name="contact" netlify data-netlify="true" action="/success.html">
+                            <input type="hidden" name="form-name" value="contact">
+                            
+                            <h3>Project Details</h3>
+                            
+                            <div class="form-group">
+                                <label for="messageName" class="form-label">Full Name *</label>
+                                <input type="text" id="messageName" name="messageName" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageEmail" class="form-label">Email Address *</label>
+                                <input type="email" id="messageEmail" name="messageEmail" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageCompany" class="form-label">Company/Organization</label>
+                                <input type="text" id="messageCompany" name="messageCompany" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageService" class="form-label">Service Needed *</label>
+                                <select id="messageService" name="messageService" class="form-input" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Website Design & Development">Website Design & Development</option>
+                                    <option value="Business Branding">Business Branding</option>
+                                    <option value="Mobile Application Design">Mobile Application Design</option>
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="E-commerce Development">E-commerce Development</option>
+                                    <option value="SEO Optimization">SEO Optimization</option>
+                                    <option value="Multiple Services">Multiple Services</option>
+                                    <option value="Not Sure">Not Sure - Need Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageBudget" class="form-label">Project Budget *</label>
+                                <select id="messageBudget" name="messageBudget" class="form-input" required>
+                                    <option value="">Select budget range</option>
+                                    <option value="Under ₦100,000">Under ₦100,000</option>
+                                    <option value="₦100,000 - ₦300,000">₦100,000 - ₦300,000</option>
+                                    <option value="₦300,000 - ₦600,000">₦300,000 - ₦600,000</option>
+                                    <option value="₦600,000 - ₦1,000,000">₦600,000 - ₦1,000,000</option>
+                                    <option value="Over ₦1,000,000">Over ₦1,000,000</option>
+                                    <option value="To be discussed">To be discussed</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageTimeline" class="form-label">Project Timeline</label>
+                                <select id="messageTimeline" name="messageTimeline" class="form-input">
+                                    <option value="">Select timeline</option>
+                                    <option value="ASAP">ASAP</option>
+                                    <option value="1-2 weeks">1-2 weeks</option>
+                                    <option value="1 month">1 month</option>
+                                    <option value="2-3 months">2-3 months</option>
+                                    <option value="3+ months">3+ months</option>
+                                    <option value="Flexible">Flexible</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageDetails" class="form-label">Project Details *</label>
+                                <textarea id="messageDetails" name="messageDetails" class="form-textarea" placeholder="Please provide detailed information about your project, including goals, target audience, specific features needed, and any other relevant details..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                    <span class="checkmark"></span>
+                                    Send me occasional updates about new services and portfolio projects
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="index.html" class="logo"><i class="fas fa-code"></i> Haleel</a>
+                    <p class="footer-description">Delivering digital solutions that drive business growth and create exceptional user experiences.</p>      
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links" id="footerServices">
+                        <!-- Services links will be generated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Industries</h4>
+                    <ul class="footer-links" id="footerIndustries">
+                        <!-- Industries links will be generated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#process" class="footer-link"><i class="fas fa-chevron-right"></i> My Process</a></li>
+                        <li><a href="index.html#projects" class="footer-link"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
+                        <li><a href="index.html#testimonials" class="footer-link"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Haleel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="js/modules/contact-message.js"></script>
+</body>
+</html>

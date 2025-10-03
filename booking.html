@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | Haleel</title>
+    <meta name="description" content="Book a consultation session with Haleel to discuss your project needs.">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><img src="assets/my-logo-1.png" alt="Haleel Logo"></a>
+            
+            <nav> 
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Case Studies</a></li>
+                    <li><a href="booking.html" class="nav-link active">Book Session</a></li>
+                    <li><a href="contact.html" class="nav-link">Send Message</a></li>
+                </ul>
+            </nav>
+            
+            <div class="top-btns">
+                <a href="contact.html" class="btn talk-btn"><i class="fas fa-envelope"></i> Send Message</a>
+                <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Booking Section -->
+        <section class="booking-section section">
+            <div class="container">
+                <div class="booking-container">
+                    <div class="booking-info">
+                        <h1>Book a Consultation Session</h1>
+                        <p class="booking-subtitle">Let's discuss your project and how I can help bring your vision to life</p>
+                        
+                        <div class="booking-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>30-Minute Session</h4>
+                                    <p>Free initial consultation to understand your needs</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-video"></i>
+                                <div>
+                                    <h4>Video Call</h4>
+                                    <p>Meet via Google Meet or Zoom for face-to-face discussion</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h4>Expert Advice</h4>
+                                    <p>Get professional insights and project recommendations</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-gift"></i>
+                                <div>
+                                    <h4>No Obligation</h4>
+                                    <p>Free consultation with no commitment required</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-form-container">
+                        <form id="bookingForm" class="booking-form" name="booking" netlify data-netlify="true" action="/success.html">
+                            <input type="hidden" name="form-name" value="booking">
+                            
+                            <h3>Schedule Your Session</h3>
+                            
+                            <div class="form-group">
+                                <label for="bookingName" class="form-label">Full Name *</label>
+                                <input type="text" id="bookingName" name="bookingName" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingEmail" class="form-label">Email Address *</label>
+                                <input type="email" id="bookingEmail" name="bookingEmail" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingPhone" class="form-label">Phone Number</label>
+                                <input type="tel" id="bookingPhone" name="bookingPhone" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingService" class="form-label">Service Interested In *</label>
+                                <select id="bookingService" name="bookingService" class="form-input" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Website Design & Development">Website Design & Development</option>
+                                    <option value="Business Branding">Business Branding</option>
+                                    <option value="Mobile Application Design">Mobile Application Design</option>
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="E-commerce Development">E-commerce Development</option>
+                                    <option value="SEO Optimization">SEO Optimization</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingDate" class="form-label">Preferred Date *</label>
+                                <input type="date" id="bookingDate" name="bookingDate" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingTime" class="form-label">Preferred Time *</label>
+                                <select id="bookingTime" name="bookingTime" class="form-input" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00-09:30">9:00 AM - 9:30 AM</option>
+                                    <option value="10:00-10:30">10:00 AM - 10:30 AM</option>
+                                    <option value="11:00-11:30">11:00 AM - 11:30 AM</option>
+                                    <option value="14:00-14:30">2:00 PM - 2:30 PM</option>
+                                    <option value="15:00-15:30">3:00 PM - 3:30 PM</option>
+                                    <option value="16:00-16:30">4:00 PM - 4:30 PM</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingMessage" class="form-label">Project Details *</label>
+                                <textarea id="bookingMessage" name="bookingMessage" class="form-textarea" placeholder="Please describe your project, goals, and any specific requirements..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i> Book Session
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="index.html" class="logo"><i class="fas fa-code"></i> Haleel</a>
+                    <p class="footer-description">Delivering digital solutions that drive business growth and create exceptional user experiences.</p>      
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links" id="footerServices">
+                        <!-- Services links will be generated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Industries</h4>
+                    <ul class="footer-links" id="footerIndustries">
+                        <!-- Industries links will be generated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#process" class="footer-link"><i class="fas fa-chevron-right"></i> My Process</a></li>
+                        <li><a href="index.html#projects" class="footer-link"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
+                        <li><a href="index.html#testimonials" class="footer-link"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Haleel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="js/modules/booking.js"></script>
+</body>
+</html>

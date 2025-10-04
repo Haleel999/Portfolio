@@ -10,8 +10,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- Loading Animation -->
@@ -22,7 +22,7 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
-            <a href="index.html" class="logo"><img src="assets/my-logo-1.png" alt="Haleel Logo"></a>
+            <a href="index.html" class="logo"><img src="my-logo-1.png" alt="Haleel Logo"></a>
             
             <nav> 
                 <ul class="nav-list">
@@ -84,29 +84,34 @@
                     </div>
                     
                     <div class="booking-form-container">
-                        <form id="bookingForm" class="booking-form" name="booking" netlify data-netlify="true" action="/success.html">
-                            <input type="hidden" name="form-name" value="booking">
+                        <form id="bookingForm" class="booking-form" action="https://formsubmit.co/jamiuhaleel@gmail.com" method="POST">
+                            <!-- FormSubmit Hidden Fields -->
+                            <input type="hidden" name="_subject" value="New Booking Request - Haleel Portfolio">
+                            <input type="hidden" name="_next" value="https://yourdomain.com/success.html">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" style="display:none">
                             
                             <h3>Schedule Your Session</h3>
                             
                             <div class="form-group">
                                 <label for="bookingName" class="form-label">Full Name *</label>
-                                <input type="text" id="bookingName" name="bookingName" class="form-input" required>
+                                <input type="text" id="bookingName" name="name" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="bookingEmail" class="form-label">Email Address *</label>
-                                <input type="email" id="bookingEmail" name="bookingEmail" class="form-input" required>
+                                <input type="email" id="bookingEmail" name="email" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="bookingPhone" class="form-label">Phone Number</label>
-                                <input type="tel" id="bookingPhone" name="bookingPhone" class="form-input">
+                                <input type="tel" id="bookingPhone" name="phone" class="form-input">
                             </div>
                             
                             <div class="form-group">
                                 <label for="bookingService" class="form-label">Service Interested In *</label>
-                                <select id="bookingService" name="bookingService" class="form-input" required>
+                                <select id="bookingService" name="service" class="form-input" required>
                                     <option value="">Select a service</option>
                                     <option value="Website Design & Development">Website Design & Development</option>
                                     <option value="Business Branding">Business Branding</option>
@@ -120,12 +125,12 @@
                             
                             <div class="form-group">
                                 <label for="bookingDate" class="form-label">Preferred Date *</label>
-                                <input type="date" id="bookingDate" name="bookingDate" class="form-input" required>
+                                <input type="date" id="bookingDate" name="preferred_date" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="bookingTime" class="form-label">Preferred Time *</label>
-                                <select id="bookingTime" name="bookingTime" class="form-input" required>
+                                <select id="bookingTime" name="preferred_time" class="form-input" required>
                                     <option value="">Select time</option>
                                     <option value="09:00-09:30">9:00 AM - 9:30 AM</option>
                                     <option value="10:00-10:30">10:00 AM - 10:30 AM</option>
@@ -138,7 +143,7 @@
                             
                             <div class="form-group">
                                 <label for="bookingMessage" class="form-label">Project Details *</label>
-                                <textarea id="bookingMessage" name="bookingMessage" class="form-textarea" placeholder="Please describe your project, goals, and any specific requirements..." required></textarea>
+                                <textarea id="bookingMessage" name="project_details" class="form-textarea" placeholder="Please describe your project, goals, and any specific requirements..." required></textarea>
                             </div>
                             
                             <button type="submit" class="btn btn-primary">
@@ -201,6 +206,6 @@
     <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
     <!-- JavaScript Files -->
-    <script type="module" src="js/modules/booking.js"></script>
+    <script type="module" src="booking.js"></script>
 </body>
 </html>

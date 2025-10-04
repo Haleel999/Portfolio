@@ -10,8 +10,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- Loading Animation -->
@@ -22,7 +22,7 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
-            <a href="index.html" class="logo"><img src="assets/my-logo-1.png" alt="Haleel Logo"></a>
+            <a href="index.html" class="logo"><img src="my-logo-1.png" alt="Haleel Logo"></a>
             
             <nav> 
                 <ul class="nav-list">
@@ -95,29 +95,34 @@
                     </div>
                     
                     <div class="contact-message-form-container">
-                        <form id="contactMessageForm" class="contact-message-form" name="contact" netlify data-netlify="true" action="/success.html">
-                            <input type="hidden" name="form-name" value="contact">
+                        <form id="contactMessageForm" class="contact-message-form" action="https://formsubmit.co/jamiuhaleel@gmail.com" method="POST">
+                            <!-- FormSubmit Hidden Fields -->
+                            <input type="hidden" name="_subject" value="New Project Inquiry - Haleel Portfolio">
+                            <input type="hidden" name="_next" value="https://yourdomain.com/success.html">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" style="display:none">
                             
                             <h3>Project Details</h3>
                             
                             <div class="form-group">
                                 <label for="messageName" class="form-label">Full Name *</label>
-                                <input type="text" id="messageName" name="messageName" class="form-input" required>
+                                <input type="text" id="messageName" name="name" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="messageEmail" class="form-label">Email Address *</label>
-                                <input type="email" id="messageEmail" name="messageEmail" class="form-input" required>
+                                <input type="email" id="messageEmail" name="email" class="form-input" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="messageCompany" class="form-label">Company/Organization</label>
-                                <input type="text" id="messageCompany" name="messageCompany" class="form-input">
+                                <input type="text" id="messageCompany" name="company" class="form-input">
                             </div>
                             
                             <div class="form-group">
                                 <label for="messageService" class="form-label">Service Needed *</label>
-                                <select id="messageService" name="messageService" class="form-input" required>
+                                <select id="messageService" name="service_needed" class="form-input" required>
                                     <option value="">Select a service</option>
                                     <option value="Website Design & Development">Website Design & Development</option>
                                     <option value="Business Branding">Business Branding</option>
@@ -132,7 +137,7 @@
                             
                             <div class="form-group">
                                 <label for="messageBudget" class="form-label">Project Budget *</label>
-                                <select id="messageBudget" name="messageBudget" class="form-input" required>
+                                <select id="messageBudget" name="project_budget" class="form-input" required>
                                     <option value="">Select budget range</option>
                                     <option value="Under ₦100,000">Under ₦100,000</option>
                                     <option value="₦100,000 - ₦300,000">₦100,000 - ₦300,000</option>
@@ -145,7 +150,7 @@
                             
                             <div class="form-group">
                                 <label for="messageTimeline" class="form-label">Project Timeline</label>
-                                <select id="messageTimeline" name="messageTimeline" class="form-input">
+                                <select id="messageTimeline" name="project_timeline" class="form-input">
                                     <option value="">Select timeline</option>
                                     <option value="ASAP">ASAP</option>
                                     <option value="1-2 weeks">1-2 weeks</option>
@@ -158,12 +163,12 @@
                             
                             <div class="form-group">
                                 <label for="messageDetails" class="form-label">Project Details *</label>
-                                <textarea id="messageDetails" name="messageDetails" class="form-textarea" placeholder="Please provide detailed information about your project, including goals, target audience, specific features needed, and any other relevant details..." required></textarea>
+                                <textarea id="messageDetails" name="project_details" class="form-textarea" placeholder="Please provide detailed information about your project, including goals, target audience, specific features needed, and any other relevant details..." required></textarea>
                             </div>
                             
                             <div class="form-group">
                                 <label class="checkbox-label">
-                                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                    <input type="checkbox" id="newsletter" name="newsletter_subscription" value="yes" checked>
                                     <span class="checkmark"></span>
                                     Send me occasional updates about new services and portfolio projects
                                 </label>
@@ -229,6 +234,6 @@
     <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
     <!-- JavaScript Files -->
-    <script type="module" src="js/modules/contact-message.js"></script>
+    <script type="module" src="contact-message.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Booking Form Handling for Netlify Forms - ES6 Module
+// Booking Form Handling for FormSubmit - ES6 Module
 import { initFooter } from './footer.js';
 import { initBackToTop } from './back-to-top.js';
 
@@ -41,9 +41,8 @@ function initBookingForm() {
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('bookingDate').min = today;
 
+        // Client-side validation only
         bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Form validation
             const name = document.getElementById('bookingName').value;
             const email = document.getElementById('bookingEmail').value;
@@ -53,12 +52,14 @@ function initBookingForm() {
             const message = document.getElementById('bookingMessage').value;
             
             if (!name || !email || !service || !date || !time || !message) {
+                e.preventDefault();
                 showNotification('Please fill in all required fields.', 'error');
                 return;
             }
             
             // Validate email
             if (!isValidEmail(email)) {
+                e.preventDefault();
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
@@ -69,10 +70,8 @@ function initBookingForm() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
             submitBtn.disabled = true;
             
-            // Netlify Forms will handle the submission automatically
-            setTimeout(() => {
-                bookingForm.submit();
-            }, 1000);
+            // FormSubmit will handle the actual submission and redirect
+            // No need to prevent default - let FormSubmit work naturally
         });
     }
 }
@@ -114,6 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initBookingForm();
     initNavigation();
-    initBackToTop(); // Use the new back-to-top module
+    initBackToTop();
     initFooter();
 });

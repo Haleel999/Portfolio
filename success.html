@@ -3,67 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent | Haleel</title>
+    <title>Message Sent Successfully | Haleel</title>
+    <meta name="description" content="Thank you for your message. I'll get back to you soon.">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="success-container">
-        <div class="success-content">
-            <div class="success-icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h1>Message Sent Successfully!</h1>
-            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
-            <div class="success-actions">
-                <a href="index.html" class="btn btn-primary">
-                    <i class="fas fa-home"></i> Back to Home
-                </a>
-                <a href="booking.html" class="btn btn-outline">
-                    <i class="fas fa-calendar-check"></i> Book Another Session
-                </a>
-            </div>
-        </div>
-    </div>
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        .success-container {
+        .success-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
+            padding: 2rem;
         }
         
-        .success-content {
+        .success-card {
             background: white;
-            padding: 3rem;
+            padding: 4rem 3rem;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
         }
         
         .success-icon {
-            font-size: 4rem;
+            font-size: 5rem;
             color: #10b981;
-            margin-bottom: 1.5rem;
-        }
-        
-        .success-content h1 {
-            color: #1f2937;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-        
-        .success-content p {
-            color: #6b7280;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            animation: bounce 1s ease-in-out;
+        }
+        
+        .success-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .success-message {
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
             line-height: 1.6;
+        }
+        
+        .success-details {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+        
+        .success-details h4 {
+            color: #374151;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .success-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .success-details li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .success-details i {
+            color: #10b981;
         }
         
         .success-actions {
@@ -73,9 +91,25 @@
             flex-wrap: wrap;
         }
         
+        @keyframes bounce {
+            0%, 20%, 60%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            80% {
+                transform: translateY(-5px);
+            }
+        }
+        
         @media (max-width: 768px) {
-            .success-content {
-                padding: 2rem;
+            .success-card {
+                padding: 3rem 2rem;
+            }
+            
+            .success-title {
+                font-size: 2rem;
             }
             
             .success-actions {
@@ -83,5 +117,69 @@
             }
         }
     </style>
+</head>
+<body>
+    <section class="success-hero">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h1 class="success-title">Message Sent Successfully!</h1>
+            
+            <p class="success-message">
+                Thank you for reaching out! I've received your message and will get back to you within 24 hours.
+            </p>
+            
+            <div class="success-details">
+                <h4><i class="fas fa-clock"></i> What happens next?</h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> I'll review your project details carefully</li>
+                    <li><i class="fas fa-check"></i> Prepare a customized proposal with timeline & pricing</li>
+                    <li><i class="fas fa-check"></i> Contact you to discuss next steps</li>
+                </ul>
+            </div>
+            
+            <div class="success-actions">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="booking.html" class="btn btn-outline">
+                    <i class="fas fa-calendar-check"></i> Book Another Session
+                </a>
+                <a href="contact.html" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i> Send Another Message
+                </a>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+                <p style="color: #6b7280; font-size: 0.9rem;">
+                    Need immediate assistance? 
+                    <a href="mailto:jamiuhaleel@gmail.com" style="color: #4a6cf7;">Email me directly</a> 
+                    or call <strong>07072073530</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Auto-redirect to home page after 30 seconds
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 30000);
+        
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
